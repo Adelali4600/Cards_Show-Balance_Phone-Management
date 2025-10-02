@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+            crossorigin="anonymous" />
+        <title>Phone Management</title>
+    </head>
+    <body>
+        <!-- ============================== NavBar ========================= -->
+
+        <nav
+            class="navbar h-auto navbar-expand-lg bg-body-tertiary position-sticky px-5">
+            <div class="container-fluid">
+                <a class="navbar-brand">Navbar</a>
+                <button class="navbar-toggler" type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup"
+                    aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link active" aria-current="page"
+                            href="../index.html">Home</a>
+                        <a class="nav-link" href="../cards/cards.html">cards</a>
+                        <a class="nav-link" href="#">Phone Management</a>
+                        <a href="../InstaPay/atm.html"
+                            class="nav-link">InstaPay</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- ============================== Section Of Phone Management ========================= -->
+        <main class="phoneManagement py-5">
+            <div class="container d-flex flex-wrap gap-4 col-12">
+                <div
+                    class="bg-light shadow border rounded p-4 d-flex flex-column gap-3">
+                    <h1>Add New Phone</h1>
+                    <input id="inputName" class="form-control"
+                        placeholder="Enter New Phone Name">
+                    <input id="inputPrice" class="form-control"
+                        placeholder="Enter New Phone price">
+                    <input id="inputQty" class="form-control"
+                        placeholder="Enter New Phone quantity">
+                    <button id="addBtn"
+                        class="btn btn-success"
+                        onclick="addNewPhone()">Add New Phone</button>
+                    <button id="saveChangesBtn"
+                        class="btn btn-info d-none"
+                        onclick="saveChanges()">Save Changes</button>
+                </div>
+                <table class="table table-dark">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Phone Name</th>
+                            <th>Phone price</th>
+                            <th>Phone quantity</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </main>
+
+        <!-- bootstrap @5.3.8 -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+            crossorigin="anonymous">
+        </script>
+        <!-- Link scripts -->
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="phoneManage.js"></script>
+    </body>
+</html>
