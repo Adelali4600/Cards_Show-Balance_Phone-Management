@@ -31,7 +31,7 @@ let withdraw = () => {
         input.value = '';
     } else {
         swal.fire({
-            icon: 'error',
+            icon: 'danger',
             title: 'Oops...',
             text: 'أنت فقير يالا',
         })

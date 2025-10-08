@@ -51,15 +51,16 @@ let deletePhone = (index) => {
     let sure = confirm('Are you sure you want to delete this phone?');
     if (sure) {
         phones.splice(index, 1);
+    } else {
+        // sweetalerts دي مكتبة
+        swal.fire({
+            icon: 'success',
+            title: 'تم حذف الهاتف بنجاح 🥳',
+            showConfirmButton: false,
+            timer: 1500,
+        });
     }
     renderPhones();
-    // sweetalerts دي مكتبة
-    swal.fire({
-        icon: 'success',
-        title: 'تم حذف الهاتف بنجاح 🥳',
-        showConfirmButton: false,
-        timer: 1500,
-    })
 }
 
 // ====================== Edit Phone
